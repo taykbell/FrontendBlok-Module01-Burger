@@ -500,6 +500,10 @@ a {
     transition: 0.1s;
 }
 
+.footer-tel._mobile {
+    display: none;
+}
+
 .footer-tel:hover {
     color: var(--light);
 }
@@ -692,10 +696,11 @@ a {
         margin-top: 12px;
         transition: 0.1s;
     }
-
+    
     .footer-tel._mobile {
         display: block;
     }
+
 
     .footer-nav {
         margin-bottom: 20px;
