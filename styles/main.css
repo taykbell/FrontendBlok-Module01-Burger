@@ -27,6 +27,8 @@ a {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    box-sizing: border-box;
+
 }
 
 .header {
@@ -37,7 +39,7 @@ a {
 .header-wrapper {
     display: flex;
     align-items: center;
-    gap: 196px;
+    gap: 56px;
     padding-top: 26px;
     padding-bottom: 26px;
 
@@ -81,6 +83,7 @@ a {
     flex-grow: 1;
     display: flex;
     gap: 47px;
+    margin-left: min(10vw, 140px);
 }
 
 .cart {
@@ -417,6 +420,8 @@ a {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
+
 }
 
 .footer-logo {
@@ -479,12 +484,17 @@ a {
     margin-bottom: 14px;
 }
 
+.footer-item:last-child {
+    flex-basis: 194px;
+}
+
 .footer-tel {
     display: block;
     color: var(--accent-light);
     font-family: var(--nanito-sans);
     font-size: 20px;
     font-weight: 800;
+    text-align: left;
     text-transform: uppercase;
     margin-top: 12px;
     transition: 0.1s;
@@ -596,3 +606,104 @@ a {
     color: var(--accent-light);
 }
 
+
+/* Media */
+
+@media (max-width: 1080px) {
+    .header-wrapper {
+        gap: 40px;
+    }
+
+    .nav {
+        margin-left: 0;
+        gap: min(3vw, 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+    width: 150px;
+    height: 47.81px;
+    }
+
+    .header-wrapper {
+        gap: 45px;
+    }
+
+    .nav {
+        gap: 22px;
+    }
+
+    .banner {
+        margin-top: 72px;
+    }
+    
+    .banner-wrapper {
+        padding: 100px 40px;
+    
+    }
+    
+    .menu-header {
+        margin-top: 80px;
+    
+    }
+
+    .menu_box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu_box._additionally {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item._additionally {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .menu-item._additionally .menu-thumb {
+        flex-basis: calc(60% -20px);
+        height: 260px;
+        margin-bottom: 0;
+    }
+
+    .menu-item._additionally .menu-info {
+        flex-basis: 40%;
+    }
+
+    .footer {
+        padding-top: 62x;
+        padding-bottom: 71px;
+    }
+
+    .footer-nav {
+        margin-bottom: 20px;
+    }
+
+    .footer-tel {
+        display: block;
+        color: var(--accent-light);
+        font-family: var(--nanito-sans);
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-top: 12px;
+        transition: 0.1s;
+    }
+
+    .footer-tel._mobile {
+        display: block;
+    }
+
+    .footer-nav {
+        margin-bottom: 20px;
+    }
+
+    .footer-item:last-child {
+        display: none;
+    }
+
+
+}
